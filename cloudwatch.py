@@ -3,7 +3,7 @@ import datetime
 
 # Upload a temperature reading for a
 # particular location and sensor
-def putData( location, sensor, temperature):
+def putData(location, sensor, temperature):
 
     client = boto3.client('cloudwatch')
 

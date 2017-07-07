@@ -1,4 +1,5 @@
-
+# Load Configuration from
+# a simple configuration file
 def loadConfig( filename ):
 
     configList = []
@@ -8,15 +9,16 @@ def loadConfig( filename ):
 
     for line in file:
         tokens = line.split(",")
-        x = ConfigEntry()
-        x.Location = tokens[0]
-        x.Sensor = tokens[1]
-        x.Device = tokens[2]
+        c = ConfigEntry()
+        c.location = tokens[0]
+        c.sensor = tokens[1]
+        c.device = tokens[2]
 
-        configList.append(x)
+        configList.append(c)
 
     return configList;
 
-
+# Simple representation of a sensor
+# read from the configuration file
 class ConfigEntry(object):
     pass
