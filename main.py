@@ -12,7 +12,7 @@ while True:
 	
 	#Acquire
         print('Acquiring data :{}:{}:'.format(device.location, device.sensor))
-        reading = collector.getData(device.location, device.sensor)
+        reading = collector.getData(device.address)
 
 	#Persist
         print('Persisting data :{}:{}:{}'.format(device.location, device.sensor, reading))

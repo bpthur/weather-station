@@ -8,11 +8,11 @@ def loadConfig( filename ):
     file = open(filename, "r") 
 
     for line in file:
-        tokens = line.split(",")
+        tokens = line.strip().split(",")
         c = ConfigEntry()
         c.location = tokens[0]
         c.sensor = tokens[1]
-        c.device = tokens[2]
+        c.address = tokens[2]
 
         configList.append(c)
 
