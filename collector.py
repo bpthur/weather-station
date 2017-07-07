@@ -2,13 +2,9 @@ import time
 import datetime
 import cloudwatch
 
-cloudwatch.putData( 'Attic', 'Onboard', 23 )
-cloudwatch.putData( 'Attic', 'Eaves', 13 )
-cloudwatch.putData( 'Attic', 'Cabinet', 33 )
-cloudwatch.putData( 'Basement', 'Onboard', 23 )
-cloudwatch.putData( 'Basement', 'Server Room', 23 )
-cloudwatch.putData( 'Basement', 'Exterior', 23 )
+def getData(location, sensor):
 
+	return;
 
 try:
 	print "timestamp,inside,outside"
