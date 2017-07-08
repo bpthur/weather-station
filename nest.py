@@ -18,6 +18,4 @@ def getNestTemp( sensor):
 	temp = json.loads(initial_response.text)
 	for t in temp['devices']['thermostats']:
 		if( temp['devices']['thermostats'][t]['device_id'] == sensor ):
-			print temp['devices']['thermostats'][t]['device_id']
-			print temp['devices']['thermostats'][t]['ambient_temperature_c']
 			return float(temp['devices']['thermostats'][t]['ambient_temperature_c']);

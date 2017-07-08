@@ -2,6 +2,7 @@ import time
 import datetime
 import cloudwatch
 import subprocess
+import nest
 
 def getData(sensor):
 
@@ -11,11 +12,9 @@ def getData(sensor):
 		return float(temp.strip("temp=").replace("'C","").strip());
 	elif(sensor.startswith('x')):
 		#Nest Thremostat
-		return 25;
+		return nest.getNestTemp(sensor);
 	else:
 		#External Temperature Probe
-		print(sensor)
-
         	tempfile = open(sensor)
         	text = tempfile.read()
         	tempfile.close()
