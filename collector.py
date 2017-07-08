@@ -10,7 +10,6 @@ def getData(sensor):
 		return float(temp.strip("temp=").replace("'C","").strip());
 	else:
 		print(sensor)
-		return 24;
 
         	tempfile = open(sensor)
         	text = tempfile.read()
