@@ -9,7 +9,7 @@ def getData(sensor):
 		#Raspberry Pi CPU
 		temp = subprocess.Popen("/opt/vc/bin/vcgencmd measure_temp", shell=True, stdout=subprocess.PIPE).stdout.read()
 		return float(temp.strip("temp=").replace("'C","").strip());
-	else if(sensor.startswith('x'):
+	elif(sensor.startswith('x')):
 		#Nest Thremostat
 		return 25;
 	else:
