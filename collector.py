@@ -12,11 +12,11 @@ def getData(sensor):
 		print(sensor)
 		return 24;
 
-        	#tempfile = open("/sys/bus/w1/devices/28-031683b2efff/w1_slave")
-        	#thetext = tempfile.read()
-        	#tempfile.close()
-        	#tempdata = thetext.split("\n")[1].split(" ")[9]
-        	#temperature = float(tempdata[2:])
-        	#inside  = temperature / 1000
+        	tempfile = open(sensor)
+        	text = tempfile.read()
+        	tempfile.close()
+        	tempdata = text.split("\n")[1].split(" ")[9]
+        	temperature = float(tempdata[2:])
+        	temperature  = temperature / 1000
 
-	return;
+		return temperature;
