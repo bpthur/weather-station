@@ -22,7 +22,7 @@ def putData(location, sensor, temperature):
                         'Value': sensor
                     },
                 ],
-                'Timestamp': datetime.datetime.now(),
+                'Timestamp': datetime.datetime.utcnow(),
                 'Value': temperature,
                 'Unit': 'None'
             },
