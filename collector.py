@@ -15,7 +15,6 @@ def getData(sensor):
 	else:
 		#External Temperature Probe
 		print(sensor)
-		return 24;
 
         	tempfile = open(sensor)
         	text = tempfile.read()
