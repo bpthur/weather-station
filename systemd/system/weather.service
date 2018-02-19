@@ -1,0 +1,10 @@
+[Unit]
+Description=Weather Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /etc/weather-station/main.py /etc/weather-station/config/basement.config
+
+[Install]
+WantedBy=multi-user.target
