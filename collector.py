@@ -22,4 +22,4 @@ def getData(sensor):
         	temperature = float(tempdata[2:])
         	temperature  = temperature / 1000
 
-		return temperature;
+	return temperature;
