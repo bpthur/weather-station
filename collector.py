@@ -1,6 +1,5 @@
 import time
 import datetime
-import cloudwatch
 import subprocess
 import nest
 
