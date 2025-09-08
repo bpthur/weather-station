@@ -1,7 +1,6 @@
 import time
 import datetime
 import subprocess
-import nest
 
 def getData(sensor):
     if sensor == "onboard":
