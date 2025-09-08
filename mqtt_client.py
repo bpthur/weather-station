@@ -5,13 +5,20 @@ import paho.mqtt.client as mqtt
 import json
 import datetime
 import time
+import socket
 
 class MQTTClient:
-    def __init__(self, broker_host, broker_port=1883, username=None, password=None, client_id="weather-station"):
+    def __init__(self, broker_host, broker_port=1883, username=None, password=None, client_id=None):
         self.broker_host = broker_host
         self.broker_port = broker_port
+
+        # Create unique client ID using hostname
+        if client_id is None:
+            hostname = socket.gethostname()
+            client_id = "weather-station-{}".format(hostname)
+
         self.client = mqtt.Client(client_id=client_id)
-        
+
         # Set up callbacks
         self.client.on_connect = self.on_connect
         self.client.on_disconnect = self.on_disconnect
